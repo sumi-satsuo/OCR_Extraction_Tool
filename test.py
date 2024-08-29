@@ -29,6 +29,7 @@ def extract_text_from_pdf(pdf_path: str) -> str:
                     first_page=page_num + 1,
                     last_page=page_num + 1)
 
+                #@TODO IF OS is MacOS - Use script to send it over to Native OCR instead of using pytesseract
                 text += pytesseract.image_to_string(images[0])
     return text
 
